@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1478136561067" name="osgi_bnd01" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="osgi_bnd01"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="0.0.0.201611030129"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="ebae12987c72f5d93b68e9a8dc729a13283d0954252ce498de86f759c1cc6064"/>
+      <attribute name="url" value="generated/osgi_bnd01.jar"/>
+      <attribute name="size" type="Long" value="4174"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="osgi_bnd01"/>
+      <attribute name="bundle-version" type="Version" value="0.0.0.201611030129"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="osgi_bnd01"/>
+      <attribute name="bundle-version" type="Version" value="0.0.0.201611030129"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.xfboy.bnd.service"/>
+      <attribute name="version" type="Version" value="0.0.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi_bnd01"/>
+      <attribute name="bundle-version" type="Version" value="0.0.0.201611030129"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="com.xfboy.bnd.service.Greeting"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="com.xfboy.bnd.service.Greeting"/>
+      <directive name="uses" value="com.xfboy.bnd.service"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/E:/workspace"/>
+      <attribute name="project.path" value="/osgi_bnd01"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=com.xfboy.bnd.service)"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+</repository>
